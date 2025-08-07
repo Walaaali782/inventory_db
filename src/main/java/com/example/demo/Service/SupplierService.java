@@ -28,4 +28,7 @@ public class SupplierService {
     public void deleteSupplier(Long id) {
         supplierRepository.deleteById(id);
     }
+    public List<Supplier> findByName(String name) {
+        return supplierRepository.findByNameContainingIgnoreCase(name);
+    }
 }
